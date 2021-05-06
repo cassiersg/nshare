@@ -263,7 +263,7 @@ mod std_impl {
     /// assert!(arr.slice(s![0, ..]).iter().eq(&[0.1, 0.2, 0.3, 0.4]));
     /// assert!(arr.slice(s![.., 0]).iter().eq(&[0.1, 0.5, 1.1, 1.5]));
     /// ```
-    impl<'a, N: Scalar> ToNdarray2 for Matrix<N, Dynamic, Dynamic, VecStorage<N, Dynamic, Dynamic>>
+    impl<N: Scalar> ToNdarray2 for Matrix<N, Dynamic, Dynamic, VecStorage<N, Dynamic, Dynamic>>
     where
         DefaultAllocator: Allocator<N, Dynamic, Dynamic, Buffer = VecStorage<N, Dynamic, Dynamic>>,
     {
